@@ -1,4 +1,4 @@
-package healthwix.com.faithwall.fragement;
+package faithcanon.fragement;
 
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -12,10 +12,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.faithcanon.R;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import healthwix.com.faithwall.R;
-import healthwix.com.faithwall.activity.MainActivity;
+import faithcanon.activity.MainActivity;
 
 /**
  * Created by a12pchbr on 11/27/2017.

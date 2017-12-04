@@ -1,4 +1,4 @@
-package healthwix.com.faithwall.activity;
+package faithcanon.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,11 +12,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.faithcanon.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import healthwix.com.faithwall.R;
-import healthwix.com.faithwall.fragement.ForgotPasswordView;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     private static final String TAG = "LoginActivity";

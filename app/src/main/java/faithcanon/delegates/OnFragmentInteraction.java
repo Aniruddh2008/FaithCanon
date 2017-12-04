@@ -1,9 +1,9 @@
-package healthwix.com.faithwall.delegates;
+package faithcanon.delegates;
 
 import android.os.Bundle;
 import android.view.View;
 
-import healthwix.com.faithwall.utils.Fragments;
+import faithcanon.utils.Fragments;
 
 
 /**

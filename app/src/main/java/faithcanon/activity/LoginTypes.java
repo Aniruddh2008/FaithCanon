@@ -1,21 +1,18 @@
-package healthwix.com.faithwall.activity;
+package faithcanon.activity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.faithcanon.R;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import healthwix.com.faithwall.R;
 
 /**
  * Created by A12PCHBR on 11/21/2017.

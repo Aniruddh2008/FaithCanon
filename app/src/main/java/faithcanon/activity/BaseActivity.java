@@ -1,4 +1,4 @@
-package healthwix.com.faithwall.activity;
+package faithcanon.activity;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -7,13 +7,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
-import healthwix.com.faithwall.delegates.OnFragmentInteraction;
+import faithcanon.delegates.OnFragmentInteraction;
 
 /**
  * Created by A12PCHBR on 11/9/2017.
  */
 
-public abstract class BaseActivity extends AppCompatActivity implements OnFragmentInteraction{
+public abstract class BaseActivity extends AppCompatActivity implements OnFragmentInteraction {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

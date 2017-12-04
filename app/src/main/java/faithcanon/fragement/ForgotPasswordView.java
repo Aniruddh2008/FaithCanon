@@ -1,27 +1,32 @@
-package healthwix.com.faithwall.fragement;
+package faithcanon.fragement;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.faithcanon.R;
 
 import butterknife.ButterKnife;
-import healthwix.com.faithwall.R;
-import healthwix.com.faithwall.activity.MainActivity;
+import faithcanon.activity.MainActivity;
 
 /**
- * Created by A12PCHBR on 11/21/2017.
+ * Created by a12pchbr on 11/27/2017.
  */
 
-public class PostScreenView extends Fragment implements View.OnClickListener {
+public class ForgotPasswordView extends Fragment implements View.OnClickListener {
+
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.post_screen_view, container, false);
+        View view = inflater.inflate(R.layout.forgot_password_view, container, false);
         return view;
     }
 
@@ -35,10 +40,12 @@ public class PostScreenView extends Fragment implements View.OnClickListener {
 
 
     private void initViews(View view) {
-        //postLayout.setVisibility(View.GONE);
         ((MainActivity)getActivity()).enableViews(true);
         ((MainActivity)getActivity()).hideShowTopLayout(true);
-        ((MainActivity)getActivity()).hideShowFeedback(true);
+        ((MainActivity)getActivity()).hideShowFeedback(false);
+        SpannableString content = new SpannableString("Forgot Password ?");
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+        //forgotPassword.setText(content);
 
     }
 
@@ -47,9 +54,10 @@ public class PostScreenView extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
+        Toast.makeText(getContext(),"Password Changed ",Toast.LENGTH_SHORT).show();
+
     }
 
 
 
 }
-

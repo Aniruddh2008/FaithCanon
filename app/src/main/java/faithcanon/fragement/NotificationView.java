@@ -1,4 +1,4 @@
-package healthwix.com.faithwall.fragement;
+package faithcanon.fragement;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,9 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.faithcanon.R;
+
 import butterknife.ButterKnife;
-import healthwix.com.faithwall.R;
-import healthwix.com.faithwall.activity.MainActivity;
+import faithcanon.activity.MainActivity;
 
 /**
  * Created by A12PCHBR on 11/21/2017.

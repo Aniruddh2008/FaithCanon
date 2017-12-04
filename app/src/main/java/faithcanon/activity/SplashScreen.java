@@ -1,11 +1,12 @@
-package healthwix.com.faithwall.activity;
+package faithcanon.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import healthwix.com.faithwall.R;
+import com.faithcanon.R;
+
 
 /**
  * Created by A12PCHBR on 11/21/2017.

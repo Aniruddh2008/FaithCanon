@@ -1,4 +1,4 @@
-package healthwix.com.faithwall.fragement;
+package faithcanon.fragement;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,22 +10,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.faithcanon.R;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import healthwix.com.faithwall.R;
-import healthwix.com.faithwall.activity.MainActivity;
-import healthwix.com.faithwall.adapter.FriendListAdapter;
-import healthwix.com.faithwall.adapter.PostAdapter;
+import faithcanon.activity.MainActivity;
+import faithcanon.adapter.PostAdapter;
 
 /**
  * Created by A12PCHBR on 11/21/2017.
  */
 
-public class FriendListView extends Fragment implements View.OnClickListener {
+public class PostView  extends Fragment implements View.OnClickListener {
     @BindView(R.id.post_list)
     RecyclerView mRecyclerView;
     @BindView(R.id.post_layout)
     LinearLayout postLayout;
+
 
     @Nullable
     @Override
@@ -46,14 +47,15 @@ public class FriendListView extends Fragment implements View.OnClickListener {
     private void initViews(View view) {
         ((MainActivity)getActivity()).enableViews(false);
         ((MainActivity)getActivity()).hideShowTopLayout(false);
-        ((MainActivity)getActivity()).hideShowFeedback(false);
-postLayout.setVisibility(View.GONE);
+        ((MainActivity)getActivity()).hideShowFeedback(true);
+        postLayout.setVisibility(View.VISIBLE);
+        postLayout.setOnClickListener(this);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(layoutManager);
 
-        FriendListAdapter mFriendListAdapter = new FriendListAdapter(getActivity());
-        mRecyclerView.setAdapter(mFriendListAdapter);
+        PostAdapter mPostAdapter = new PostAdapter(getActivity());
+        mRecyclerView.setAdapter(mPostAdapter);
 
 
     }
@@ -62,10 +64,11 @@ postLayout.setVisibility(View.GONE);
 
     @Override
     public void onClick(View v) {
+        PostScreenView mPostScreenView=new PostScreenView();
+        ((MainActivity)getActivity()).addFragementView(mPostScreenView);
 
     }
 
 
 
 }
-

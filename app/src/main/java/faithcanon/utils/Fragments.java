@@ -1,4 +1,4 @@
-package healthwix.com.faithwall.utils;
+package faithcanon.utils;
 
 /**
  * Created by A123G4YY on 10/25/2017.

@@ -1,34 +1,30 @@
-package healthwix.com.faithwall.activity;
+package faithcanon.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.faithcanon.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import healthwix.com.faithwall.R;
-import healthwix.com.faithwall.adapter.PostAdapter;
-import healthwix.com.faithwall.fragement.FriendListView;
-import healthwix.com.faithwall.fragement.NotificationView;
-import healthwix.com.faithwall.fragement.PostView;
-import healthwix.com.faithwall.fragement.ProfileView;
-import healthwix.com.faithwall.fragement.SettingView;
-import healthwix.com.faithwall.utils.Fragments;
+import faithcanon.fragement.FriendListView;
+import faithcanon.fragement.NotificationView;
+import faithcanon.fragement.PostView;
+import faithcanon.fragement.ProfileView;
+import faithcanon.fragement.SettingView;
+import faithcanon.utils.Fragments;
 
 public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {

@@ -1,4 +1,4 @@
-package healthwix.com.faithwall.fragement;
+package faithcanon.fragement;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,27 +10,27 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.faithcanon.R;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import healthwix.com.faithwall.R;
-import healthwix.com.faithwall.activity.MainActivity;
-import healthwix.com.faithwall.adapter.CommentAdapter;
-import healthwix.com.faithwall.adapter.PostAdapter;
+import faithcanon.activity.MainActivity;
+import faithcanon.adapter.FriendListAdapter;
 
 /**
  * Created by A12PCHBR on 11/21/2017.
  */
 
-public class CommentView extends Fragment implements View.OnClickListener {
+public class FriendListView extends Fragment implements View.OnClickListener {
     @BindView(R.id.post_list)
     RecyclerView mRecyclerView;
-
-
+    @BindView(R.id.post_layout)
+    LinearLayout postLayout;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.commment_view, container, false);
+        View view = inflater.inflate(R.layout.post_view, container, false);
         return view;
     }
 
@@ -44,16 +44,16 @@ public class CommentView extends Fragment implements View.OnClickListener {
 
 
     private void initViews(View view) {
-        ((MainActivity)getActivity()).enableViews(true);
-        ((MainActivity)getActivity()).hideShowTopLayout(true);
-        ((MainActivity)getActivity()).hideShowFeedback(true);
-
+        ((MainActivity)getActivity()).enableViews(false);
+        ((MainActivity)getActivity()).hideShowTopLayout(false);
+        ((MainActivity)getActivity()).hideShowFeedback(false);
+postLayout.setVisibility(View.GONE);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(layoutManager);
 
-        CommentAdapter commentAdapter = new CommentAdapter(getActivity());
-        mRecyclerView.setAdapter(commentAdapter);
+        FriendListAdapter mFriendListAdapter = new FriendListAdapter(getActivity());
+        mRecyclerView.setAdapter(mFriendListAdapter);
 
 
     }
@@ -62,11 +62,10 @@ public class CommentView extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        PostScreenView mPostScreenView=new PostScreenView();
-        ((MainActivity)getActivity()).addFragementView(mPostScreenView);
 
     }
 
 
 
 }
+

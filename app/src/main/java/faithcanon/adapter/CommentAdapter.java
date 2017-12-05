@@ -1,4 +1,4 @@
-package healthwix.com.faithwall.adapter;
+package faithcanon.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import healthwix.com.faithwall.R;
+import com.faithcanon.R;
 
 
 /**

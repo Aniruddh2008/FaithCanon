@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="healthwix.com.faithwall">
+    package="com.faithcanon">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.SplashScreen"
+            android:name="faithcanon.activity.SplashScreen"
             android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden"
             >
@@ -21,22 +21,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.MainActivity"
+            android:name="faithcanon.activity.MainActivity"
             android:windowSoftInputMode="stateHidden"
-            android:parentActivityName=".activity.LoginActivity"/>
+            android:parentActivityName="faithcanon.activity.LoginActivity"/>
         <activity
-            android:name=".activity.SignupActivity"
+            android:name="faithcanon.activity.SignupActivity"
             android:windowSoftInputMode="stateHidden"
-            android:parentActivityName=".activity.LoginActivity"/>
+            android:parentActivityName="faithcanon.activity.LoginActivity"/>
         <activity
-            android:name=".activity.LoginActivity"
+            android:name="faithcanon.activity.LoginActivity"
             android:windowSoftInputMode="stateHidden"
-            android:parentActivityName=".activity.LoginActivity"/>
+            android:parentActivityName="faithcanon.activity.LoginActivity"/>
         <activity
-            android:name=".activity.LoginTypes"
+            android:name="faithcanon.activity.LoginTypes"
             android:windowSoftInputMode="stateHidden"
-            android:parentActivityName=".activity.LoginActivity"/>
+            android:parentActivityName="faithcanon.activity.LoginActivity"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
 
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

@@ -1,20 +1,16 @@
-package healthwix.com.faithwall.fragement;
+package faithcanon.fragement;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
-import butterknife.BindView;
+import com.faithcanon.R;
+
 import butterknife.ButterKnife;
-import healthwix.com.faithwall.R;
-import healthwix.com.faithwall.activity.MainActivity;
-import healthwix.com.faithwall.adapter.FriendListAdapter;
+import faithcanon.activity.MainActivity;
 
 /**
  * Created by A12PCHBR on 11/21/2017.
